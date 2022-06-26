@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page | Blog Website</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <style>
+    .banner {
+      margin: 0;
+      padding: 0;
+      background-image: url(./Darbhanga-DestinationPage-HeroBanner-2.jpg);
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .navbar {
+      width: 85%;
+      margin: auto;
+      padding: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: 120px;
+      cursor: pointer;
+    }
+
+    .navbar ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      position: relative;
+
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: whitesmoke;
+    }
+
+    .navbar ul li ::after {
+      content: '';
+      height: 3px;
+      width: 0;
+      background: rgb(14, 164, 223);
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.5s;
+
+
+    }
+
+    .navbar ul li :hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Hero Section */
+
+    #hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero_content h1 {
+      font-size: 6rem;
+      line-height: 1.2;
+    }
+
+    .hero_content h4 {
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero_image img {
+      border-radius: 5rem;
+    }
+
+    /* Long Card Section */
+
+    .h-card {
+      display: flex;
+      margin: 2rem 1rem;
+      box-shadow: 0px 5px 4px rgba(221, 221, 221, 0.25);
+      align-items: center;
+      border: 1px solid #e2e2e2;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .card_content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .status {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .read-btn {
+      all: unset;
+      font-weight: 600;
+      border-bottom: 3px;
+      left: 0;
+      transition: 0.5s;
+    }
+
+    .read-btn:hover {
+      border-bottom: 3px solid skyblue;
+    }
+
+    /* v-cards */
+
+    .v-card {
+      display: flex;
+      flex-direction: column-reverse;
+      max-width: 320px;
+      box-shadow: 0px 5px 4px rgba(221, 221, 221, 0.25);
+      align-items: center;
+      border: 1px solid #e2e2e2;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .card_container {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .card_wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .v-card img {
+      width: 100%;
+      height: 100%;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    footer ul {
+      display: flex;
+      gap: 2rem;
+    }
+
+    footer ul li {
+      font-size: 1.8rem;
+    }
+
+    /* Post page */
+    .banner_image img {
+      width: 100%;
+    }
+
+    .post h1 {
+      font-size: 3rem;
+    }
+
+    .post hr {
+      margin: 3rem 0;
+    }
+
+    .about-author {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .dropdown {
+      display: none;
+    }
+
+    .navbar ul li:hover .dropdown {
+      display: block;
+      position: absolute;
+      background: rgb(9, 232, 110);
+      margin-top: 15px;
+      margin-left: -15px;
+
+    }
+
+    .navbar ul li:hover .dropdown ul {
+      display: block;
+      margin: 10px;
+    }
+
+    .navbar ul li:hover .dropdown ul li {
+      width: 150px;
+      padding: 10px;
+
+
+
+
+    }
+
+    .navbar ul li:hover .dropdown ul li a:hover {
+      color: brown
+    }
+
+    .footer {
+      margin-top: -25px;
+      background-color: rgba(0, 0, 0, 0.842);
+      color: white;
+
+    }
+
+    .footer #aa {
+      text-align: center;
+      color: grey;
+    }
+
+    #b {
+      text-align: center;
+    }
+
+    #fg {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    #c a {
+      text-decoration: none;
+      color: white !important;
+    }
+
+    #D {
+      padding-left: 10px;
+      height: 50px;
+      margin-left: -165px;
+      color: white;
+      border-radius: 25px;
+      border: 2px solid blue;
+      padding-right: 10px;
+      background-color: black;
+    }
+
+    #E a {
+      text-decoration: none;
+      color: white;
+    }
+
+    hr {
+      border-top: 1px solid grey
+    }
+
+    .footer .icon {
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-evenly;
+      width: 40%;
+      padding-bottom: 11px;
+    }
+
+    .k {
+      display: flex;
+      justify-content: center;
+    }
+
+    li a:hover {
+      transform: scale(1.5);
+      color: white;
+
+    }
+
+    .icon a {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    <div class="navbar"> <img src="./ilovedbg.png" class="logo">
+      <ul>
+        <li><a href="">HOME </a></li>
+
+        <LI><a href="">GALLERY </a>
+
+          <div class="dropdown">
+            <ul>
+              <li> <a
+                  href="https://www.google.com/search?q=ahilya+asthan&sxsrf=ALiCzsZop50NlSoHYNUJ6jv5xRWVznogWQ:1654781164961&source=lnms&tbm=isch&sa=X&ved=2ahUKEwio1pKcvKD4AhV_SGwGHY5JAycQ_AUoAnoECAQQBA&biw=1280&bih=569&dpr=1.5">
+              <li>Ahilya Astan</li></a>
+        </li>
+        <li> <a
+            href="https://www.google.com/search?q=Kusheshwar+Asthan+Shiv+Temple&sxsrf=ALiCzsbJsGtSiDny5gvGXU_1ijHHOHkjag:1654781095732&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjZn5H7u6D4AhXJTmwGHT_aBXAQ_AUoAnoECAIQBA">Kusheshwar-asthan</a>
+        </li>
+        <li> <a
+            href="https://www.google.com/search?q=lnmu&tbm=isch&sxsrf=ALiCzsZT5AKu0o0CwP1gmhnZt3ROvQEzzA:1654781277669&source=lnms&sa=X&ved=2ahUKEwjE5PHRvKD4AhXdZWwGHZE-BsoQ_AUoA3oECAEQBQ&biw=1280&bih=569&dpr=1.5">LNMU</a>
+        </li>
+      </ul>
+
+    </div>
+    </LI>
+    <LI><a href="./ABOUT.HTML">ABOUT </a></LI>
+    </ul>
+  </div>
+  </div>
+  <main>
+    <section id="hero">
+      <div class="hero_content">
+        <h1>Darbhanga Tousrism</h1>
+        <h4>THE HEART OF MITHILA </h4>
+      </div>
+      <div class="hero_image">
+        <img src="./istockphoto-1331565520-612x612.jpg" alt="hero" />
+      </div>
+    </section>
+    <div class="h-card">
+      <div class="card_content">
+        <h2>Ahilya Asthan</h2>
+        <p>
+          Ahilya Asthan (also called Ahilya Sthan or Ahilya Asthan)
+          is a Hindu temple located at Ahiyari South in
+          the city of Darbhanga, State of Bihar, India.The temple is dedicated to Ahalya.
+          The temple is open from 5 a.m. till 10 p.m. daily. Ramanavami is celebrated, in the Hindu month of Chaitra and
+          Vivah Panchami
+        </p>
+        <div class="status">
+          <p>1 May 22</p>
+          <a href="./post.html"><button class="read-btn">Read More</button></a>
+        </div>
+      </div>
+      <img src="./Ahilya Asthan4.jpg" alt="laptop guy" />
+    </div>
+
+    <div class="card_container">
+      <div class="card_wrapper">
+        <div class="v-card">
+          <div class="card_content">
+            <h2>Kusheshwar-asthan</h2>
+            <p>
+              Kusheshwar Asthan Shiv Temple also known as mithilanchal dev ghar in Kusheshwar Asthan. It is an important
+              religious place, situated about 16 Km. east of Singhia and 22 Km. northeast of Hasanpur Road railway
+              station on the Samastipur, Khagaria Branch line of North Eastern Railway. It is noted for the temple of
+              Lord Shiva known as baba Kusheshwarasthan. Pligrims visit this place all the year round for worship. The
+              origin of this temple is traced to the epic period
+            </p>
+            <div class="status">
+              <p>1 May 22</p>
+              <a href="./post.html"><button class="read-btn">Read More</button></a>
+            </div>
+          </div>
+          <img src="./kasthan1.jpg" alt="laptop guy" />
+        </div>
+      </div>
+      <div class="card_wrapper">
+        <div class="v-card">
+          <div class="card_content">
+            <h2>LNMU </h2>
+            <p>
+              The Lalit Narayan Mithila University (LNMU) is a public university in India. It is ranked 1 in Bihar and
+              ranked 92 in India according to uniRank 2021 ranking.Began in 1972, the university initially functioned
+              from the Mohanpur House at Sara Mohanpur village of Darbhanga-Sakri route. In 1975, it was shifted to the
+              campus belonging to Raj Darbhanga.
+            </p>
+            <div class="status">
+              <p>1 May 22</p>
+              <a href="./post.html"><button class="read-btn">Read More</button></a>
+            </div>
+          </div>
+          <img src="./lnmucampus.jpg" alt="laptop guy" />
+        </div>
+      </div>
+      <div class="card_wrapper">
+        <div class="v-card">
+          <div class="card_content">
+            <h2> Darbhanga Fort</h2>
+            <p>
+              Darbhanga Fort is also called Ram Bagh Fort,[1] because it is situated in Rambagh Palace inside the fort.
+              Rambagh campus is surrounded by walls and spreads in about 85 acres of land.
+
+              But when the construction of the fort was completed on three sides and the wall of the western part was
+              being constructed that India got independence from the British rule. In India, the new government came to
+              power and stopped the princely state and zamindari system. As a result, the semi-constructed wall was
+              built up to the same place and the fort was
+            </p>
+            <div class="status">
+              <p>1 May 22</p>
+              <a href="./post.html"><button class="read-btn">Read More</button></a>
+            </div>
+          </div>
+          <img src="./dbgfort.jpg" alt="laptop guy" />
+        </div>
+      </div>
+    </div>
+    <div class="h-card">
+      <div class="card_content">
+        <h2> Shyama Kali temple</h2>
+        <p>
+          Mother Kali's Dham Shyama Kali temple is built on the pyre in Darbhanga, Bihar. A large number of devotees
+          visit here and all Manglik works are also done. This temple is known as Shyama Mai's temple.[1] Shyama Mai's
+          temple is built on the pyre of Maharaja Rameshwar Singh at the crematorium Ghat and is an unusual occurrence
+          in itself. Maharaja Rameshwar Singh was one of the seeker kings of the Darbhanga royal family. Due to the name
+          of the king, this temple is known as Rameshwari Shyama Mai. The temple was founded by Maharaj Kameshwar Singh
+          of Darbhanga in 1933
+        </p>
+        <div class="status">
+          <p>8 Feb 2022</p>
+          <a href="./post.html"><button class="read-btn">Read More</button></a>
+        </div>
+      </div>
+      <img src="./shyamatemple.jpg" alt="laptop guy">
+    </div>
+  </main>
+  <hr />
+
+
+  <div class="footer ">
+    <h5 id="aa" style="padding-top: 15px;"> Let's Start...</h5>
+    <h1 id="b">Your Journey</h1>
+    <div id="fg">
+      <h3 id="c"> <a href="mailto:manikantkrsahu@gmail.com"> <i class="bi bi-envelope-paper"></i>
+          manikantkrsahu@gmail.com</a></h3>
+
+      <button id="D"> Calculate fare</button>
+      <h3 id="E"> <a href="Tel:08544250515"><i class="bi bi-telephone"></i> Call me</a></h3>
+    </div>
+    <div class="k">
+      <div class="icon">
+
+        <a href="https://www.instagram.com/manikant__18/"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/mani.kant.39794895/"> <i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com/Manikan57897016?t=WdjwSCB68iC71n0amONjPg&s=09"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/manikant-sahu-677519222/"><i class="bi bi-linkedin"></i></a>
+        <a href=" https://wa.me/+918544250515"><i class="bi bi-whatsapp"> </i> </a>
+        <a href="https://www.youtube.com/channel/UCjrIN2ROJK8rR5IJMSZm50g/featured"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
